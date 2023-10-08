@@ -17,7 +17,7 @@ function divide(firstNum, secondNum) {
 
 // create 3 variables for each part of equation (number operator number).
 const firstNum = document.querySelector('#firstNum');
-const operator = document.querySelector('#operator');
+const symbol = document.querySelector('#operator');
 const secondNum = document.querySelector('#secondNum');
 
 // create an operator function that takes these variables and uses one of the previous functions to solve the equation.
