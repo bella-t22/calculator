@@ -13,7 +13,7 @@ btns.forEach(btn => {
 })
 
 function print(btn) {
-    return display.innerText = btn.value;
+    return display.innerText += btn.value;
 }
 
 function add(firstNum, secondNum) {
