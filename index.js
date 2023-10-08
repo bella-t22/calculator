@@ -1,4 +1,21 @@
-// create functions for all basic math operators. (+-*/)
+const display = document.getElementById("display");
+console.log(display);
+const btns = document.querySelectorAll("button");
+const firstNum = document.getElementById("firstNum");
+const symbol = document.getElementById("operator");
+const secondNum = document.getElementById("secondNum");
+
+btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        console.log(btn.value);
+        print(btn);
+    })
+})
+
+function print(btn) {
+    return display.innerText = btn.value;
+}
+
 function add(firstNum, secondNum) {
     return firstNum + secondNum;
 }
@@ -15,12 +32,6 @@ function divide(firstNum, secondNum) {
     return firstNum / secondNum;
 }
 
-// create 3 variables for each part of equation (number operator number).
-const firstNum = document.querySelector('#firstNum');
-const symbol = document.querySelector('#operator');
-const secondNum = document.querySelector('#secondNum');
-
-// create an operator function that takes these variables and uses one of the previous functions to solve the equation.
 function operator(firstNum, symbol, secondNum) {
     if (symbol === '+') {
         return add(firstNum, secondNum);

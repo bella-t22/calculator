@@ -40,7 +40,14 @@ h1 {
     height: 70px;
     margin: 10px 0px;
     margin-top: 0;
+    padding: 0px 20px;
     border-radius: 20px;
+    color:rgb(72, 100, 105);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 200;
 }
 
 .container {
@@ -73,6 +80,11 @@ button {
     color: rgb(72, 100, 105);
     font-size: 18px;
     margin: 8px 4px;
+}
+
+button:active {
+    width: 65px;
+    height: 65px;
 }
 
 #clear-btn {
