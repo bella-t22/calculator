@@ -1,35 +1,54 @@
 const display = document.getElementById("display");
-console.log(display);
 const btns = document.querySelectorAll("button");
-const firstNum = document.getElementById("firstNum");
-const symbol = document.getElementById("operator");
-const secondNum = document.getElementById("secondNum");
+const equal = document.getElementById("equal");
+let symbol;
+let firstNum;
+let secondNum;
 
 btns.forEach(btn => {
     btn.addEventListener('click', () => {
-        console.log(btn.value);
         print(btn);
     })
 })
 
+equal.addEventListener('click', () => {
+    let arr = display.innerText.split(symbol);
+    firstNum = Number(arr[0]);
+    secondNum = Number(arr[1]);
+
+    operator(firstNum, symbol, secondNum);
+})
+
 function print(btn) {
-    return display.innerText += btn.value;
+    display.innerText += btn.value;
+
+    if (btn.classList == 'symbol') {
+        symbol = btn.value;
+    }
 }
 
 function add(firstNum, secondNum) {
-    return firstNum + secondNum;
+    const result = firstNum + secondNum;
+    console.log(result);
+    return result;
 }
 
 function subtract(firstNum, secondNum) {
-    return firstNum - secondNum;
+    const result = firstNum - secondNum;
+    console.log(result);
+    return result;
 }
 
 function multiply(firstNum, secondNum) {
-    return firstNum * secondNum;
+    const result = firstNum * secondNum;
+    console.log(result);
+    return result;
 }
 
 function divide(firstNum, secondNum) {
-    return firstNum / secondNum;
+    const result = firstNum / secondNum;
+    console.log(result);
+    return result;
 }
 
 function operator(firstNum, symbol, secondNum) {
