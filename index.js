@@ -25,11 +25,26 @@ equal.addEventListener('click', () => {
 })
 
 function print(btn) {
-    display.innerText += btn.value;
-
     if (btn.classList == 'symbol') {
+        if (symbol) {
+            let nextSymbol = btn.value;
+            console.log(nextSymbol);
+
+            let arr = display.innerText.split(symbol);
+            console.log(arr);
+            firstNum = Number(arr[0]);
+            console.log(firstNum);
+            secondNum = Number(arr[1]);
+            console.log(secondNum);
+
+            const result = operator(firstNum, symbol, secondNum);
+            display.innerText = result;
+            symbol = nextSymbol;
+        }
         symbol = btn.value;
     }
+
+    display.innerText += btn.value;
 }
 
 function add(firstNum, secondNum) {
