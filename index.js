@@ -1,6 +1,7 @@
 const display = document.getElementById("display");
 const btns = document.querySelectorAll("button");
 const equal = document.getElementById("equal");
+const clearBtn = document.getElementById("clear-btn");
 let symbol;
 let firstNum;
 let secondNum;
@@ -11,12 +12,16 @@ btns.forEach(btn => {
     })
 })
 
+clearBtn.addEventListener('click', () => {
+    return display.innerText = '';
+})
+
 equal.addEventListener('click', () => {
     let arr = display.innerText.split(symbol);
     firstNum = Number(arr[0]);
     secondNum = Number(arr[1]);
 
-    operator(firstNum, symbol, secondNum);
+    return operator(firstNum, symbol, secondNum);
 })
 
 function print(btn) {
@@ -29,25 +34,21 @@ function print(btn) {
 
 function add(firstNum, secondNum) {
     const result = firstNum + secondNum;
-    console.log(result);
     return result;
 }
 
 function subtract(firstNum, secondNum) {
     const result = firstNum - secondNum;
-    console.log(result);
     return result;
 }
 
 function multiply(firstNum, secondNum) {
     const result = firstNum * secondNum;
-    console.log(result);
     return result;
 }
 
 function divide(firstNum, secondNum) {
     const result = firstNum / secondNum;
-    console.log(result);
     return result;
 }
 
