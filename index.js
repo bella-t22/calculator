@@ -53,13 +53,13 @@ function divide(firstNum, secondNum) {
 
 function operator(firstNum, symbol, secondNum) {
     if (symbol === '+') {
-        return add(firstNum, secondNum);
+        return display.innerText = add(firstNum, secondNum);
     } else if (symbol === '-') {
-        return subtract(firstNum, secondNum);
+        return display.innerText = subtract(firstNum, secondNum);
     } else if (symbol === 'x') {
-        return multiply(firstNum, secondNum);
+        return display.innerText = multiply(firstNum, secondNum);
     } else if (symbol === '/') {
-        return divide(firstNum, secondNum);
+        return display.innerText = divide(firstNum, secondNum);
     } else {
         return 'Uh oh, try again';
     }
